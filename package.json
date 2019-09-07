@@ -1,6 +1,6 @@
 {
   "name": "parcel-app",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "create-parce-all allows you to create a parcel application without code something about it.",
   "main": "src/index.js",
   "bin": {
@@ -10,13 +10,12 @@
     "access": "public"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "esm": "^3.2.25",
+    "figlet": "^1.2.4",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
     "shelljs": "^0.8.3"
-  },
-  "devDependencies": {
-    "figlet": "^1.2.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

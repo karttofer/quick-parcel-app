@@ -1,4 +1,4 @@
-# Parcel App
+# Parcel App 🚀
 Parcel as webpack allows you to create react projects (and bundler different things as images, files etc), but with parcel you don't need to
 configure anything, everything with parcel already was configured for you. Also, Parcel follow a very strong and strict philosophy 
 "Be fast, be simple" (yeah, they don't say that in their website), but it's obvious. So, parcel app allows creating a react application
@@ -19,7 +19,7 @@ npm start
 The application going to run at [http://localhost:1234/](http://localhost:1234/)</br>
 If you are ready to publish to npm, you can run `npm run build`
 <p align="center">
-  <img width="720" height="420" src="https://j.gifs.com/1WQX8j.gif">
+  <img width="720" height="420" src="https://j.gifs.com/ROwZBK.gif">
 </p>
 
 ### Just run start
@@ -34,15 +34,6 @@ of </br>`create-react-app <app-name>`.
 ```sh
   npx parcel-app <app-name>
 ```
-## npm
-```npm
- npm parcel-app <app-name>
-```
-## yarn
-```sh
- yarn parcel-app <app-name>
-```
-
 ## Tree
 ```
 <app-name>

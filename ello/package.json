@@ -1,0 +1,14 @@
+{
+    "name": "ello",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "start": "parcel ./public/index.html",
+        "build": "parcel build ./public/index.html --public-url ./"
+    },
+    "author": "",
+    "license": "MIT"
+}
