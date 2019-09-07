@@ -4,7 +4,7 @@ configure anything, everything with parcel already was configured for you. Also,
 "Be fast, be simple" (yeah, they don't say that in their website), but it's obvious. So, parcel app allows creating a react application
 without configuring anything.
 
-- [Parcel App](https://parcelapp.netlify.com) - How to create a new app.</br>
+- [Our Web](https://parcelapp.netlify.com) - How to create a new app.</br>
 - [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?</br>
 - [React  Documentation](https://es.reactjs.org/) - You don't know anything about react?.
   
