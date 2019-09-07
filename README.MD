@@ -1,4 +1,5 @@
-# Parcel App 🚀
+# Parcel App 🚀 
+[![NPM](https://img.shields.io/npm/v/parcel-app.svg)](https://www.npmjs.com/package/parcel-app) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)</br>
 Parcel as webpack allows you to create react projects (and bundler different things as images, files etc), but with parcel you don't need to
 configure anything, everything with parcel already was configured for you. Also, Parcel follow a very strong and strict philosophy 
 "Be fast, be simple" (yeah, they don't say that in their website), but it's obvious. So, parcel app allows creating a react application
