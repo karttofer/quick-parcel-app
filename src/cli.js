@@ -1,6 +1,5 @@
 import shell from 'shelljs'
 import path  from 'path'
-import { dir } from '../templates/path.js'
 import { welcomeMessage, finalMessage ,taskList } from './methods.js' 
 /* 
 	cli function will have an important paper on the project
@@ -14,8 +13,11 @@ import { welcomeMessage, finalMessage ,taskList } from './methods.js'
 	We need to wait until the taskList method finish the process for 
 	run the final message function.
 */
+const actualPath = import.meta.url;
+const templatesDir = path.resolve(new URL(actualPath).pathname,'../../templates/default',
+).slice(3)
 export async function cli(args) {
 	welcomeMessage();
-	await taskList(path.resolve(dir, 'default'),`${process.cwd()}/${args}`, args);
+	await taskList(templatesDir,`${process.cwd()}/${args}`, args);
 	finalMessage(args);
 }

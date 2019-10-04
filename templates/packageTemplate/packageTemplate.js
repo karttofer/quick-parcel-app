@@ -17,7 +17,11 @@ const Package = {
 	},
 	"scripts": {
 		"start": "parcel ./public/index.html",
-    	"build": "parcel build ./public/index.html --public-url ./"
+    	"build": "parcel build ./public/index.html --public-url ./",
+    	"test": "jest --watchAll"
+	},
+	"jest": {
+	"setupFilesAfterEnv": ["./src/setupTest.js"]
 	},
 	"author": "",
 	"license": "MIT"
