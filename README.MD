@@ -1,41 +1,50 @@
-# Parcel App 🚀 
-[![NPM](https://img.shields.io/npm/v/parcel-app.svg)](https://www.npmjs.com/package/parcel-app) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)</br>
-Parcel as webpack allows you to create react projects (and bundler different things as images, files etc), but with parcel you don't need to
-configure anything, everything with parcel already was configured for you. Also, Parcel follow a very strong and strict philosophy 
-"Be fast, be simple" (yeah, they don't say that in their website), but it's obvious. So, parcel app allows creating a react application
+# Parcel App 🚀
+
+[![NPM](https://img.shields.io/npm/v/parcel-app.svg)](https://www.npmjs.com/package/parcel-app) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+</br>
+
+Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to
+configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy:
+"Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Parcel App (this project) allows you to create a React application
 without configuring anything.
 
-- [Our Web](https://parcelapp.netlify.com) - How to create a new app.</br>
+- [Main Website](https://parcelapp.netlify.com) - How to create a new app.</br>
 - [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?</br>
-- [React  Documentation](https://es.reactjs.org/) - You don't know anything about react?.
-  
-If something doesn't works please create a new [issue](https://github.com/karttofer/parcel-app/issues/new)
+- [React Documentation](https://es.reactjs.org/) - You don't know anything about react?
+
+If something doesn't work please create a new [issue](https://github.com/karttofer/parcel-app/issues/new).
 
 # Quick Overview
+
 ```sh
 npx parcel-app app-name
 cd app-name
 npm start
 ```
-The application going to run at [http://localhost:1234/](http://localhost:1234/)</br>
-If you are ready to publish to npm, you can run `npm run build`
+
+The application will run at [http://localhost:1234/](http://localhost:1234/)</br>
+If you are ready to publish to npm, you can run `npm run build`.
+
 <p align="center">
   <img width="720" height="420" src="https://j.gifs.com/xn9P3z.gif">
 </p>
 
 ### Just run start
-Parcel was create to make fast your project production, using parcel you don't need to configure anything because everything was created for you.
+
+Parcel was created to make your project production fast. Using Parcel, you don't need to configure anything because everything was created for you.
 
 ### Create an app
-**If you want to use Parcel App you will need to have the latest version of node**, you can dounwload it throug
-its website [node](https://nodejs.org/es/). With parcel app you only need to write the command and the project name this following the command
-of </br>`create-react-app <app-name>`.
+
+**If you want to use Parcel App you will need to have the latest version of Node.** You can download it through its website [here](https://nodejs.org/es/). With Parcel App you only need to write the command and the project name, similar to `create-react-app <app-name>`.
 
 ## npx
+
 ```sh
   npx parcel-app <app-name>
 ```
+
 ## Tree
+
 ```
 <app-name>
 ├── node_modules
@@ -50,34 +59,40 @@ of </br>`create-react-app <app-name>`.
 ```
 
 ### Inspiration
-I had inspiration for create-react-app, this command that I used a lot when I was more beginner, right now I know that I need to learn more about it but right now I know that I can to create something for the community and give something to the beginners to go under the hood easier doing that build a react project was easier.
+
+I had inspiration from create-react-app. I used this command a lot when I was a beginner. I know that I need to learn more about it, but I wanted to create something for the community and give something to the beginners to go under the hood more easily. Now, building a React project is easier!
 
 ### Why Parcel?
-When I'm building a project I first think about if I will need to use Parcel or Webpack, because if you want to build a small application
-it's better to use Parcel, it's fast, easy and very small (compact). 
 
-### You followed any methodologie?
-I'm triying to use all the time git, but sometimes I don't know why I don't use it, please don't be like me. I just followed this:
-was:
+When I'm building a project I first think about if I will need to use Parcel or Webpack, because if you want to build a small application it's better to use Parcel - it's fast, easy and very small (compact).
+
+### Methodology?
+
+I'm trying to use git all the time, but sometimes I don't. Please don't be like me. I just followed this:
+
 - I tried to study a lot.
-- Wacth a lot of videos about it (Yeeep, this is the reality bro).
-- Learn post about the topic wrote for people that have more experience than me.
+- Watch a lot of videos about it (yeeep, this is the reality, Bro).
+- Read posts about the topic written for people that have more experience than me.
 - Advice: use git all the time.
 
-### Can I take this code and improve?
-Yeah, everything on my github it's accesible and you can improve or use as example. Just please, share my networks (if you want).
+### Can I take this code and improve it?
+
+Yeah, everything on my GitHub is accessible and you can improve it or use it as an example. Just please, share my networks (if you want).
 
 ### Tools
-`esm` esm allows you to use import. Treat to use it. More infomation [esm](https://www.npmjs.com/package/esm)</br>
-`listr` listr allows you create task list on the console. More infomation [listr](https://www.npmjs.com/package/listr)</br>
-`ncp` ncp allows you to copy a file of a directory and paste in another. More infomation [ncp](https://www.npmjs.com/package/ncp)</br>
-`shelljs` with shelljs you can run commands. More infomation [shelljs](https://www.npmjs.com/package/shelljs)</br>
-`figlet` with figlet you can show on console amazing fonts. More information [figlet](https://www.npmjs.com/package/figlet)
 
-### Nex freactures
+`esm` allows you to use import. Treat to use it. More infomation [here](https://www.npmjs.com/package/esm).</br>
+`listr` allows you to create a task list on the console. More infomation [here](https://www.npmjs.com/package/listr).</br>
+`ncp` allows you to copy a file of a directory and paste in another. More infomation [here](https://www.npmjs.com/package/ncp).</br>
+`shelljs` allows you to run shell commands. More infomation [here](https://www.npmjs.com/package/shelljs).</br>
+`figlet` can allow you to use amazing fonts on the console. More information [here](https://www.npmjs.com/package/figlet).
+
+### Next Features
+
 - React optimizer
 - Testing command
-- ESlint
+- ESLint
 
-### Liscence
+### License
+
 MIT © Jhornan Colina [MIT License](https://github.com/karttofer/parcel-app/blob/master/LICENSE)
