@@ -71,7 +71,7 @@
 					  				const testingDevs = spawn('npm i --save-dev jest enzyme enzyme-adapter-react-16 enzyme-to-json', { shell: true });
 					  				return testingDevs.on('exit', () => {
 					  					observer.next('react -> react-dom -> parcel-bundler');
-					  					const baseDevs = spawn('npm i react react-dom parcel-bundler', { shell: true });
+					  					const baseDevs = spawn('npm i react react-dom parcel-bundler prettier', { shell: true });
 					  					return baseDevs.on('exit', () => {
 					  						observer.complete();
 					  						resolve();
