@@ -17,7 +17,7 @@ const actualPath = import.meta.url;
 const templatesDir = path.resolve(new URL(actualPath).pathname,'../../templates/default',
 ).slice(3)
 export async function cli(args) {
-	welcomeMessage();
+	welcomeMessage(args,`${process.cwd()}/${args}`);
 	await taskList(templatesDir,`${process.cwd()}/${args}`, args);
-	//finalMessage(args);
+	finalMessage(args,`${process.cwd()}`);
 }

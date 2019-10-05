@@ -16,7 +16,7 @@ const Package = {
 
 	},
 	"scripts": {
-		"start": "parcel ./public/index.html",
+		"start": "parcel ./public/index.html --open",
     	"build": "parcel build ./public/index.html --public-url ./",
     	"test": "jest --watchAll"
 	},
