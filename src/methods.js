@@ -67,8 +67,8 @@
 					  			observer.next('@babel/core -> @babel/preset-env -> @babel/preset-react -> @babel/plugin-proposal-class-properties -> babel-jest');
 					  			const babelDevs = spawn('npm i --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties babel-jest', { shell: true });
 					  			return babelDevs.on('exit', () => {
-					  				observer.next('jest -> enzyme -> enzyme-adapter-react-16');
-					  				const testingDevs = spawn('npm i --save-dev jest enzyme enzyme-adapter-react-16', { shell: true });
+					  				observer.next('jest -> enzyme -> enzyme-adapter-react-16 -> enzyme-to-json');
+					  				const testingDevs = spawn('npm i --save-dev jest enzyme enzyme-adapter-react-16 enzyme-to-json', { shell: true });
 					  				return testingDevs.on('exit', () => {
 					  					observer.next('react -> react-dom -> parcel-bundler');
 					  					const baseDevs = spawn('npm i react react-dom parcel-bundler', { shell: true });

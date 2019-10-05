@@ -20,9 +20,12 @@ const Package = {
     	"build": "parcel build ./public/index.html --public-url ./",
     	"test": "jest --watchAll"
 	},
-	"jest": {
-	"setupFilesAfterEnv": ["./src/setupTest.js"]
-	},
+	 "jest": {
+        "setupFilesAfterEnv": [
+            "./src/setupTest.js"
+        ],
+        "snapshotSerializers": ["enzyme-to-json/serializer"]
+    },
 	"author": "",
 	"license": "MIT"
 };
