@@ -19,5 +19,5 @@ const templatesDir = path.resolve(new URL(actualPath).pathname,'../../templates/
 export async function cli(args) {
 	welcomeMessage();
 	await taskList(templatesDir,`${process.cwd()}/${args}`, args);
-	finalMessage(args);
+	//finalMessage(args);
 }
