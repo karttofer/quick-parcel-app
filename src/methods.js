@@ -36,6 +36,7 @@ import { spawn } from 'child_process'
 import { promisify } from 'util'
 import { Observable } from 'rxjs'
 import { Package } from '../templates/packageTemplate/packageTemplate.js'
+
 const copy = promisify(ncp);
 const copyTemplateFiles = (templateDir, targetDir) => {
   return copy(templateDir, targetDir, {
@@ -51,7 +52,6 @@ const welcomeMessage = projectName => {
     'This can take a few minutes.'
   )}
 			`);
-}
 const finalMessage = (nameProject, targetDir) => {
   const message = `    ${chalk.cyan('Complete!')}, created ${chalk.magenta(
     nameProject
@@ -72,6 +72,7 @@ const finalMessage = (nameProject, targetDir) => {
   shell.cd(targetDir);
   return shell.exec('npm start');
 };
+
 const taskList = async (templateDir, targetDir) => {
   const list = new List([
     {
@@ -93,6 +94,7 @@ const taskList = async (templateDir, targetDir) => {
       title: 'Gettings Dependencies...',
       task: () => {
         return new Observable(observer => {
+
           new Promise((resolve) => {
             observer.next(
               '@babel/core -> @babel/preset-env -> @babel/preset-react -> @babel/plugin-proposal-class-properties -> babel-jest'
@@ -128,8 +130,9 @@ const taskList = async (templateDir, targetDir) => {
     ])
     await list.run();
   };
+}
   export{
     welcomeMessage,
     taskList,
     finalMessage
-  };
+  }
