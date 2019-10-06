@@ -1,13 +1,16 @@
+/*
+	This is the base file of the command, it comes first
+	that will be executed and where we will call the function cli
+	of cli.js to be able to start all the processes
+	necessary to properly run the command.
+
+	esm will allow us to use import in this way
+	make the way we make imports more friendly.
+	we also do a require of the function cli that exports
+	cli.js and pass as parameter 'process.argv [2]' that
+	It will give us the name that the user wants to give the project.
+
+*/
 #!/usr/bin/env node
 require = require('esm')(module /*, options*/);
 require('../src/cli').cli(process.argv[2]);
-
-/*
-	Command of the first line: that tells the system what interpreter to pass that file to for execution.
-
-	esm: this npm will allows us to make import from other files or to other files.
-	
-	require of cli: we're doing an import of the cli function inside of cli.js and pass it the process.argv (this will be the name wrote for the user inside of
-	the console)
-
-*/
