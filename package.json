@@ -14,11 +14,13 @@
     "esm": "^3.2.25",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
+    "prettier": "^1.18.2",
     "rxjs": "^6.5.3",
     "shelljs": "^0.8.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js"
   },
   "repository": {
     "type": "git",
