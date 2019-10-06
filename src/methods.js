@@ -9,13 +9,6 @@
 	import { promisify } from 'util';
 	import { Observable } from 'rxjs'
 	import { Package } from '../templates/packageTemplate/packageTemplate.js'
-	/* 
-		This function will copy the files from the template directory 
-		to the destination directory (The template directory will be where 
-		the user ran the application) 
-
-		clobber: will not overwrite destination files that already exist.
-	*/
 	const copy = promisify(ncp)
 	const copyTemplateFiles = (templateDir, targetDir) => {
 		return copy(templateDir, targetDir, {
@@ -37,13 +30,6 @@
 		shell.exec('npm start')
 		console.log('Runing server...')
 	};
-	/*
-	 taskList function created a task list to see what is happening while the parcel-app command is running.
-	
-		- Building project
-		- Building package
-		- Gettings Dependencies...
-	*/
 	const taskList = async (templateDir,targetDir, projectName) => {
 		const list = new List([
 			{
