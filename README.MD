@@ -25,9 +25,7 @@ npm start
 The application will run at [http://localhost:1234/](http://localhost:1234/)</br>
 If you are ready to publish to npm, you can run `npm run build`.
 
-<p align="center">
-  <img width="720" height="420" src="https://j.gifs.com/r8VROw.gif">
-</p>
+<iframe src='//gifs.com/embed/xxzxzxw-vlLoGg' frameborder='0' scrolling='no' width='790px' height='522px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>
 
 ### Just run start
 
