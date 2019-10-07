@@ -5,7 +5,6 @@
       the project (args)
 
 */
-import shell from 'shelljs'
 import path from 'path'
 import { welcomeMessage, finalMessage, taskList } from './methods.js'
 const actualPath = import.meta.url
@@ -14,6 +13,6 @@ const templatesDir = path
   .slice(3)
 export async function cli(args) {
   welcomeMessage(args, `${process.cwd()}/${args}`)
-  await taskList(templatesDir, `${process.cwd()}/${args}`, args)
+  await taskList(templatesDir, `${process.cwd()}/${args}`)
   finalMessage(args, `${process.cwd()}`)
 }

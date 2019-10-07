@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+require = require('esm')(module /*, options*/);
+require('../src/cli').cli(process.argv[2]);
 /*
 	This is the base file of the command, it comes first
 	that will be executed and where we will call the function cli
@@ -11,6 +14,3 @@
 	It will give us the name that the user wants to give the project.
 
 */
-#!/usr/bin/env node
-require = require('esm')(module /*, options*/);
-require('../src/cli').cli(process.argv[2]);
