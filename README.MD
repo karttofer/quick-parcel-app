@@ -6,7 +6,7 @@
 Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to
 configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy:
 "Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Parcel App (this project) allows you to create a React application
-without configuring anything.
+without configuring anything.s
 
 - [Main Website](https://parcelapp.netlify.com) - How to create a new app.</br>
 - [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?</br>
@@ -26,7 +26,7 @@ The application will run at [http://localhost:1234/](http://localhost:1234/)</br
 If you are ready to publish to npm, you can run `npm run build`.
 
 <p align="center">
-  <img width="720" height="420" src="https://j.gifs.com/xn9P3z.gif">
+  <img width="720" height="420" src="https://j.gifs.com/r8VROw.gif">
 </p>
 
 ### Just run start
@@ -88,9 +88,6 @@ Yeah, everything on my GitHub is accessible and you can improve it or use it as 
 `figlet` can allow you to use amazing fonts on the console. More information [here](https://www.npmjs.com/package/figlet).
 
 ### Next Features
-
-- React optimizer
-- Testing command
 - ESLint
 
 ### License

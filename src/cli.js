@@ -1,21 +1,17 @@
-import shell from 'shelljs'
-import path  from 'path'
-import { dir } from '../templates/path.js'
-import { welcomeMessage, finalMessage ,taskList } from './methods.js' 
-/* 
-	cli function will have an important paper on the project
-	because it will pass the args (the text that user wrote
-	in this case the name of the application).
-
-	Apart, cli will call everything from methods.js
-
-	Why async await?
-
-	We need to wait until the taskList method finish the process for 
-	run the final message function.
+/*
+	  * This file will run our methods from the methods.js file
+      it will also pass as targetDir parameters (directory where
+      the project is created) and the name given by the user to
+      the project (args)
 */
+import path from 'path'
+import { welcomeMessage, finalMessage, taskList } from './methods.js'
+const actualPath = import.meta.url
+const templatesDir = path
+  .resolve(new URL(actualPath).pathname, '../../templates/default')
+  .slice(3)
 export async function cli(args) {
-	welcomeMessage();
-	await taskList(path.resolve(dir, 'default'),`${process.cwd()}/${args}`, args);
-	finalMessage(args);
+  welcomeMessage(args, `${process.cwd()}/${args}`)
+  await taskList(templatesDir, `${process.cwd()}/${args}`)
+  finalMessage(args, `${process.cwd()}`)
 }

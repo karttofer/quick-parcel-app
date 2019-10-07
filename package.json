@@ -1,7 +1,7 @@
 {
   "name": "parcel-app",
-  "version": "1.0.5",
-  "description": "create-parce-all allows you to create a parcel application without code something about it.",
+  "version": "1.0.6",
+  "description": "parcel-app allows you to create a parcel application without code something about it.",
   "main": "src/index.js",
   "bin": {
     "parcel-app": "bin/parcel-app"
@@ -12,13 +12,15 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "esm": "^3.2.25",
-    "figlet": "^1.2.4",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
+    "prettier": "^1.18.2",
+    "rxjs": "^6.5.3",
     "shelljs": "^0.8.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js"
   },
   "repository": {
     "type": "git",
