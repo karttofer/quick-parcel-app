@@ -99,7 +99,7 @@ const taskList = async (templateDir, targetDir) => {
         return new Observable(observer => {
           new Promise(resolve => {
             observer.next(
-              '@babel/core -> @babel/preset-env -> @babel/preset-react \n-> @babel/plugin-proposal-class-properties -> babel-jest'
+              '@babel/core -> @babel/preset-env -> @babel/preset-react -> @babel/plugin-proposal-class-properties -> babel-jest'
             )
             const babelDevs = spawn(
               'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties babel-jest',
@@ -107,7 +107,7 @@ const taskList = async (templateDir, targetDir) => {
             )
             return babelDevs.on('exit', () => {
               observer.next(
-                'jest -> enzyme -> enzyme-adapter-react-16 \n-> enzyme-to-json'
+                'jest -> enzyme -> enzyme-adapter-react-16 -> enzyme-to-json'
               )
               const testingDevs = spawn(
                 'npm i --save-dev jest enzyme enzyme-adapter-react-16 enzyme-to-json',

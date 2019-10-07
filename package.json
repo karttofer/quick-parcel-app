@@ -1,7 +1,7 @@
 {
   "name": "parcel-app",
-  "version": "1.0.5",
-  "description": "create-parce-all allows you to create a parcel application without code something about it.",
+  "version": "1.0.6",
+  "description": "parcel-app allows you to create a parcel application without code something about it.",
   "main": "src/index.js",
   "bin": {
     "parcel-app": "bin/parcel-app"
