@@ -1,4 +1,4 @@
-  /*
+/*
       This file saves all the functions that we will have to use to be able to
       Run the command appropriately. To make everything run well,
       I need to make some imports that allow me to make it work
@@ -37,21 +37,24 @@ import { promisify } from 'util'
 import { Observable } from 'rxjs'
 import { Package } from '../templates/packageTemplate/packageTemplate.js'
 
-const copy = promisify(ncp);
+const copy = promisify(ncp)
 const copyTemplateFiles = (templateDir, targetDir) => {
   return copy(templateDir, targetDir, {
     clobber: false,
-  });
-};
+  })
+}
 const welcomeMessage = projectName => {
-  console.log();
-  console.log(`    Creating a new project in: ${chalk.yellow(`./${projectName}`)}
-			`);
-  console.log(`    Creating a packpage.json...`);
+  console.log()
+  console.log(`    Creating a new project in: ${chalk.yellow(
+    `./${projectName}`
+  )}
+			`)
+  console.log(`    Creating a packpage.json...`)
   console.log(`    Getting neccesary dependencies. ${chalk.yellow(
     'This can take a few minutes.'
   )}
-			`);
+      `)
+}
 const finalMessage = (nameProject, targetDir) => {
   const message = `    ${chalk.cyan('Complete!')}, created ${chalk.magenta(
     nameProject
@@ -64,15 +67,15 @@ const finalMessage = (nameProject, targetDir) => {
   )} start\n    Run the development server\n\n    ${chalk.cyan(
     'npm'
   )} build\n    Bundles the app into static files for production\n\n    ${chalk.cyan(
-    `cd ${nameProject}`
+    `cd  ${nameProject}`
   )}\n    ${chalk.cyan('npm ')}start\n\n    Good luck! ╚(ಠ_ಠ)=┐`
-  console.log(message);
-  console.log();
-  console.log('    Runing development server....');
-  shell.cd(targetDir);
-  return shell.exec('npm start');
-};
-
+  console.log()
+  console.log(message)
+  console.log()
+  console.log('    Runing development server....')
+  shell.cd(targetDir)
+  return shell.exec('npm start')
+}
 const taskList = async (templateDir, targetDir) => {
   const list = new List([
     {
@@ -94,10 +97,9 @@ const taskList = async (templateDir, targetDir) => {
       title: 'Gettings Dependencies...',
       task: () => {
         return new Observable(observer => {
-
-          new Promise((resolve) => {
+          new Promise(resolve => {
             observer.next(
-              '@babel/core -> @babel/preset-env -> @babel/preset-react -> @babel/plugin-proposal-class-properties -> babel-jest'
+              '@babel/core -> @babel/preset-env -> @babel/preset-react \n-> @babel/plugin-proposal-class-properties -> babel-jest'
             )
             const babelDevs = spawn(
               'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties babel-jest',
@@ -105,7 +107,7 @@ const taskList = async (templateDir, targetDir) => {
             )
             return babelDevs.on('exit', () => {
               observer.next(
-                'jest -> enzyme -> enzyme-adapter-react-16 -> enzyme-to-json'
+                'jest -> enzyme -> enzyme-adapter-react-16 \n-> enzyme-to-json'
               )
               const testingDevs = spawn(
                 'npm i --save-dev jest enzyme enzyme-adapter-react-16 enzyme-to-json',
@@ -122,17 +124,13 @@ const taskList = async (templateDir, targetDir) => {
                   resolve()
                 })
               })
-      })
-    })
-  })
+            })
+          })
+        })
+      },
+    },
+  ])
+  await list.run()
 }
-}
-    ])
-    await list.run();
-  };
-}
-  export{
-    welcomeMessage,
-    taskList,
-    finalMessage
-  }
+
+export { welcomeMessage, taskList, finalMessage }
