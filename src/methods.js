@@ -36,7 +36,6 @@ import { spawn } from 'child_process'
 import { promisify } from 'util'
 import { Observable } from 'rxjs'
 import { Package } from '../templates/packageTemplate/packageTemplate.js'
-
 const copy = promisify(ncp)
 const copyTemplateFiles = (templateDir, targetDir) => {
   return copy(templateDir, targetDir, {
@@ -99,7 +98,7 @@ const taskList = async (templateDir, targetDir) => {
         return new Observable(observer => {
           new Promise(resolve => {
             observer.next(
-              '@babel/core -> @babel/preset-env -> @babel/preset-react -> @babel/plugin-proposal-class-properties -> babel-jest'
+              `@Babel dependencies`
             )
             const babelDevs = spawn(
               'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties babel-jest',
@@ -107,14 +106,14 @@ const taskList = async (templateDir, targetDir) => {
             )
             return babelDevs.on('exit', () => {
               observer.next(
-                'jest -> enzyme -> enzyme-adapter-react-16 -> enzyme-to-json'
+                '@Testing dependencies'
               )
               const testingDevs = spawn(
                 'npm i --save-dev jest enzyme enzyme-adapter-react-16 enzyme-to-json',
                 { shell: true }
               )
               return testingDevs.on('exit', () => {
-                observer.next('react -> react-dom -> parcel-bundler')
+                observer.next('@Base dependencies')
                 const baseDevs = spawn(
                   'npm i react react-dom parcel-bundler prettier',
                   { shell: true }
