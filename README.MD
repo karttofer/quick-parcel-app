@@ -6,7 +6,7 @@
 Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to
 configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy:
 "Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Parcel App (this project) allows you to create a React application
-without configuring anything.s
+without configuring anything
 
 - [Main Website](https://parcelapp.netlify.com) - How to create a new app.</br>
 - [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?</br>
