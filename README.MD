@@ -87,8 +87,19 @@ Yeah, everything on my GitHub is accessible and you can improve it or use it as 
 `shelljs` allows you to run shell commands. More infomation [here](https://www.npmjs.com/package/shelljs).</br>
 `figlet` can allow you to use amazing fonts on the console. More information [here](https://www.npmjs.com/package/figlet).
 
-### Next Features
-- ESLint
+# What’s Included?
+We wanted to create a good environment for you, treating to use tools that can help you to create your projects easier.
+
+- Test driven development for you react components using Jest and Enzyme.
+- Css, Less and Stylus, parcel has everything configured for you in this manner can user different preprocessors.
+- @babel/plugin-proposal-class-properties our mission is to make you feel good while you're creating your application so, feel good to use the new features of React.
+
+# Future feactures
+We want to keep improving Parcel-app making easier to use, having more tool that can help you to create easier your applications. 
+
+- SACSS Support
+- TypeScript Support
+
 
 ### License
 
