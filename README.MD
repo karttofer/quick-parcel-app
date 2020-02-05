@@ -3,6 +3,9 @@
 [![NPM](https://img.shields.io/npm/v/parcel-app.svg)](https://www.npmjs.com/package/parcel-app) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 </br>
 
+## Warning 💥 
+<strong>Hi guys, I know Parcel app have a problem in Mac Os it's so sad, but if you want you can help me to make grow up this project please share it. This project was created as a gift for the Parcel community.</strong>
+
 Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to
 configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy:
 "Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Parcel App (this project) allows you to create a React application
