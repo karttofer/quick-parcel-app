@@ -100,7 +100,7 @@ We wanted to create a good environment for you, treating to use tools that can h
 ## Future feactures
 We want to keep improving Parcel-app making easier to use, having more tool that can help you to create easier your applications. 
 
-- SACSS Support
+- SASS Support
 - TypeScript Support
 
 
