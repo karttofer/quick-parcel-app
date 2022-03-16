@@ -1,6 +1,6 @@
 {
   "name": "parcel-app",
-  "version": "1.0.6",
+  "version": "1.1.7",
   "description": "parcel-app allows you to create a parcel application without code something about it.",
   "main": "src/index.js",
   "bin": {
