@@ -3,7 +3,7 @@
       Run the command appropriately. To make everything run well,
       I need to make some imports that allow me to make it work
       All in the right way.
-      
+
       * chalk: allows us to have text of different colors.
       * ncp: we will use it to copy and drop files in a given address.
       * shell: allows us to execute command and in this case also enter the directory
@@ -26,7 +26,6 @@
       * taskList: this function uses "listr" to create a list of tasks, in this way
         separate each process from the command and be able to show the user what is happening.
   */
-'use strict'
 import chalk from 'chalk'
 import ncp from 'ncp'
 import List from 'listr'
@@ -101,7 +100,7 @@ const taskList = async (templateDir, targetDir) => {
               `@Babel dependencies`
             )
             const babelDevs = spawn(
-              'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties babel-jest',
+              'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react',
               { shell: true }
             )
             return babelDevs.on('exit', () => {
