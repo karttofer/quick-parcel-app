@@ -1,14 +1,15 @@
-# 🔥 Parcel App 🚀
+# 🔥 Quick Parcel App 🚀
 
 [![NPM](https://img.shields.io/npm/v/parcel-app.svg)](https://www.npmjs.com/package/parcel-app) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 </br>
 
-## Warning 💥 
-<strong>Hi guys, I know Parcel app have a problem in Mac Os it's so sad, but if you want you can help me to make grow up this project please share it. This project was created as a gift for the Parcel community.</strong>
+## Warning 💥
+
+<strong>Hi guys, I know Quick Parcel app have a problem in Mac Os it's so sad, but if you want you can help me to make grow up this project please share it. This project was created as a gift for the Parcel community.</strong>
 
 Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to
 configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy:
-"Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Parcel App (this project) allows you to create a React application
+"Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Quick Parcel App (this project) allows you to create a React application
 without configuring anything
 
 - [Main Website](https://parcelapp.netlify.com) - How to create a new app.</br>
@@ -28,22 +29,18 @@ npm start
 The application will run at [http://localhost:1234/](http://localhost:1234/)</br>
 If you are ready to publish to npm, you can run `npm run build`.
 
-<p align="center">
-  <img width="720" height="420" src="https://j.gifs.com/vlLoGg.gif">
-</p>
-
 ### Just run start
 
 Parcel was created to make your project production fast. Using Parcel, you don't need to configure anything because everything was created for you.
 
 ### Create an app
 
-**If you want to use Parcel App you will need to have the latest version of Node.** You can download it through its website [here](https://nodejs.org/es/). With Parcel App you only need to write the command and the project name, similar to `create-react-app <app-name>`.
+**If you want to use Quick Parcel App you will need to have the latest version of Node.** You can download it through its website [here](https://nodejs.org/es/). With Quick Parcel App you only need to write the command and the project name, similar to `create-react-app <app-name>`.
 
 ## npx
 
 ```sh
-  npx parcel-app <app-name>
+  npx quick-parcel-app <app-name>
 ```
 
 ## Tree
@@ -91,18 +88,18 @@ Yeah, everything on my GitHub is accessible and you can improve it or use it as 
 `figlet` can allow you to use amazing fonts on the console. More information [here](https://www.npmjs.com/package/figlet).
 
 ## What’s Included?
+
 We wanted to create a good environment for you, treating to use tools that can help you to create your projects easier.
 
 - Test driven development for you react components using Jest and Enzyme.
 - Css, Less and Stylus, parcel has everything configured for you in this manner can user different preprocessors.
-- @babel/plugin-proposal-class-properties our mission is to make you feel good while you're creating your application so, feel good to use the new features of React.
 
 ## Future feactures
-We want to keep improving Parcel-app making easier to use, having more tool that can help you to create easier your applications. 
+
+We want to keep improving Parcel-app making easier to use, having more tool that can help you to create easier your applications.
 
 - SASS Support
 - TypeScript Support
-
 
 ### License
 
