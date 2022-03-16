@@ -103,4 +103,4 @@ We want to keep improving Parcel-app making easier to use, having more tool that
 
 ### License
 
-MIT © Jhornan Colina [MIT License](https://github.com/karttofer/parcel-app/blob/master/LICENSE)
+Free use my guys ❤️
