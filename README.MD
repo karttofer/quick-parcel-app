@@ -21,8 +21,8 @@ If something doesn't work please create a new [issue](https://github.com/karttof
 # Quick Overview
 
 ```sh
-npx parcel-app app-name
-cd app-name
+npx quick-parcel-app <app-name>
+cd <app-name>
 npm start
 ```
 
