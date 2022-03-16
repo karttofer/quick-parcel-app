@@ -96,17 +96,13 @@ const taskList = async (templateDir, targetDir) => {
       task: () => {
         return new Observable(observer => {
           new Promise(resolve => {
-            observer.next(
-              `@Babel dependencies`
-            )
+            observer.next(`@Babel dependencies`)
             const babelDevs = spawn(
               'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react',
               { shell: true }
             )
             return babelDevs.on('exit', () => {
-              observer.next(
-                '@Testing dependencies'
-              )
+              observer.next('@Testing dependencies')
               const testingDevs = spawn(
                 'npm i --save-dev jest enzyme enzyme-adapter-react-16 enzyme-to-json',
                 { shell: true }
