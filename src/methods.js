@@ -100,58 +100,81 @@ const taskList = async (templateDir, targetDir) => {
             task: () => copyTemplateFiles(templateDir, targetDir),
         },
         {
-            title: '',
+            title: 'Creating Packpage Json',
             task: async () => {
                 shell.cd(targetDir)
+                return new Promise((resolve, reject) => {
+                    const child = spawn('npm init --yes', { shell: true })
 
-                await spawn('npm', ['init', '--yes'])
+                    child.on('exit', (code, signal) => {
+                        if (code === 0) {
+                            const createTargetDirFolder = path.resolve(
+                                targetDir,
+                                'package.json'
+                            )
 
-                await setTimeoutPromise(1000)
+                            try {
+                                const existingPackageJson = fs.readFileSync(
+                                    createTargetDirFolder,
+                                    'utf-8'
+                                )
 
-                const createTargetDirFolder = path.resolve(
-                    targetDir,
-                    'package.json'
-                )
+                                const packageJson = JSON.parse(
+                                    existingPackageJson
+                                )
 
-                try {
-                    const existingPackageJson = fs.readFileSync(
-                        createTargetDirFolder,
-                        'utf-8'
-                    )
+                                packageJson.name = process.argv[2]
+                                packageJson.scripts = {
+                                    start: 'parcel ./public/index.html --open',
+                                    build:
+                                        'parcel build ./public/index.html --public-url ./',
+                                    test: 'jest --watchAll',
+                                    prettier:
+                                        'prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js',
+                                }
+                                packageJson.jest = {
+                                    setupFilesAfterEnv: ['./src/setupTest.js'],
+                                    snapshotSerializers: [
+                                        'enzyme-to-json/serializer',
+                                    ],
+                                }
+                                packageJson.main = 'index.js'
 
-                    const packageJson = JSON.parse(existingPackageJson)
+                                const updatedPackageJson = JSON.stringify(
+                                    packageJson,
+                                    null,
+                                    2
+                                )
 
-                    packageJson.name = process.argv[2]
-                    packageJson.scripts = {
-                        start: 'parcel ./public/index.html --open',
-                        build:
-                            'parcel build ./public/index.html --public-url ./',
-                        test: 'jest --watchAll',
-                        prettier:
-                            'prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js',
-                    }
-                    packageJson.jest = {
-                        setupFilesAfterEnv: ['./src/setupTest.js'],
-                        snapshotSerializers: ['enzyme-to-json/serializer'],
-                    }
-                    packageJson.main = 'index.js'
+                                fs.writeFileSync(
+                                    createTargetDirFolder,
+                                    updatedPackageJson,
+                                    'utf-8'
+                                )
 
-                    const updatedPackageJson = JSON.stringify(
-                        packageJson,
-                        null,
-                        2
-                    )
+                                console.log(
+                                    'package.json updated successfully!'
+                                )
+                                resolve()
+                            } catch (error) {
+                                console.error(
+                                    'Error updating package.json:',
+                                    error
+                                )
+                            }
+                        } else {
+                            reject(
+                                new Error(
+                                    `Command failed with code ${code} and signal ${signal}`
+                                )
+                            )
+                        }
+                    })
 
-                    fs.writeFileSync(
-                        createTargetDirFolder,
-                        updatedPackageJson,
-                        'utf-8'
-                    )
-
-                    console.log('package.json updated successfully!')
-                } catch (error) {
-                    console.error('Error updating package.json:', error)
-                }
+                    child.on('error', err => {
+                        reject(err)
+                    })
+                })
             },
         },
         {
