@@ -2,11 +2,11 @@
 
 Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy: "Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Quick Parcel App (this project) allows you to create a React application without configuring anything.
 
-- [Main Website](https://parcelapp.netlify.com/) - How to create a new app.
+-   [Main Website](https://parcelapp.netlify.com/) - How to create a new app.
 
-- [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?
+-   [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?
 
-- [React Documentation](https://es.reactjs.org/) - You don't know anything about react?
+-   [React Documentation](https://es.reactjs.org/) - You don't know anything about react?
 
 If something doesn't work please create a new [issue](https://github.com/karttofer/parcel-app/issues/new).
 
@@ -26,6 +26,6 @@ We only have one testing for the App.js component, so this will be the first tes
 
 This is a new open-source project, we want to create something new and amazing for Parcel, if you want you can support it or share it, that can help us a lot.
 
-- **Github:** [https://github.com/karttofer/parcel-app](https://github.com/karttofer/parcel-app)
-- **Npm:** [https://www.npmjs.com/package/parcel-app](https://www.npmjs.com/package/parcel-app)
-- **Parcel Github:** [https://github.com/parcel-bundler/parcel](https://github.com/parcel-bundler/parcel)
+-   **Github:** [https://github.com/karttofer/parcel-app](https://github.com/karttofer/parcel-app)
+-   **Npm:** [https://www.npmjs.com/package/parcel-app](https://www.npmjs.com/package/parcel-app)
+-   **Parcel Github:** [https://github.com/parcel-bundler/parcel](https://github.com/parcel-bundler/parcel)

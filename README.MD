@@ -3,18 +3,14 @@
 [![NPM](https://img.shields.io/npm/v/quick-parcel-app.svg)](https://www.npmjs.com/package/quick-parcel-app) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 </br>
 
-## Warning 💥
-
-<strong>Hi guys, I know Quick Parcel app have a problem in Mac Os it's so sad, but if you want you can help me to make grow up this project please share it. This project was created as a gift for the Parcel community.</strong>
-
 Parcel (like Webpack) allows you to create React projects (and bundle different things such as images, files etc). With Parcel you don't need to
 configure anything - everything is configured for you. Also, Parcel follows a very strong and strict philosophy:
 "Be fast, be simple" (yeah, they don't say that in their website, but it's obvious). So, Quick Parcel App (this project) allows you to create a React application
 without configuring anything
 
-- [Main Website](https://parcelapp.netlify.com) - How to create a new app.</br>
-- [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?</br>
-- [React Documentation](https://es.reactjs.org/) - You don't know anything about react?
+-   [Main Website](https://parcelapp.netlify.com) - How to create a new app.</br>
+-   [Parcel Documentation](https://parceljs.org/) - Do you want to know more about Parcel?</br>
+-   [React Documentation](https://es.reactjs.org/) - You don't know anything about react?
 
 If something doesn't work please create a new [issue](https://github.com/karttofer/parcel-app/issues/new).
 
@@ -70,10 +66,10 @@ When I'm building a project I first think about if I will need to use Parcel or 
 
 I'm trying to use git all the time, but sometimes I don't. Please don't be like me. I just followed this:
 
-- I tried to study a lot.
-- Watch a lot of videos about it (yeeep, this is the reality, Bro).
-- Read posts about the topic written for people that have more experience than me.
-- Advice: use git all the time.
+-   I tried to study a lot.
+-   Watch a lot of videos about it (yeeep, this is the reality, Bro).
+-   Read posts about the topic written for people that have more experience than me.
+-   Advice: use git all the time.
 
 ### Can I take this code and improve it?
 
@@ -91,15 +87,15 @@ Yeah, everything on my GitHub is accessible and you can improve it or use it as 
 
 We wanted to create a good environment for you, treating to use tools that can help you to create your projects easier.
 
-- Test driven development for you react components using Jest and Enzyme.
-- Css, Less and Stylus, parcel has everything configured for you in this manner can user different preprocessors.
+-   Test driven development for you react components using Jest and Enzyme.
+-   Css, Less and Stylus, parcel has everything configured for you in this manner can user different preprocessors.
 
 ## Future feactures
 
 We want to keep improving Parcel-app making easier to use, having more tool that can help you to create easier your applications.
 
-- SASS Support
-- TypeScript Support
+-   SASS Support
+-   TypeScript Support
 
 ### License
 

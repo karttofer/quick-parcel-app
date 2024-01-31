@@ -27,19 +27,34 @@
         separate each process from the command and be able to show the user what is happening.
   */
 import chalk from 'chalk'
-import ncp from 'ncp'
 import List from 'listr'
 import fs from 'fs'
 import shell from 'shelljs'
+import util from 'util'
+import path from 'path'
 import { spawn } from 'child_process'
-import { promisify } from 'util'
 import { Observable } from 'rxjs'
-import { Package } from '../templates/packageTemplate/packageTemplate.js'
-const copy = promisify(ncp)
+
+const setTimeoutPromise = util.promisify(setTimeout)
+
+const createFolder = folderName => {
+    fs.mkdirSync(folderName)
+}
+
 const copyTemplateFiles = (templateDir, targetDir) => {
-    return copy(templateDir, targetDir, {
-        clobber: false,
-    })
+    const createTargetDirFolder = path.resolve(targetDir, targetDir)
+
+    fs.mkdirSync(createTargetDirFolder, { recursive: true })
+
+    try {
+        fs.cp(templateDir, createTargetDirFolder, { recursive: true }, err => {
+            if (err) {
+                console.error(err)
+            }
+        })
+    } catch (error) {
+        console.log(error)
+    }
 }
 const welcomeMessage = projectName => {
     console.log()
@@ -77,20 +92,66 @@ const finalMessage = (nameProject, targetDir) => {
 const taskList = async (templateDir, targetDir) => {
     const list = new List([
         {
-            title: 'Building Folder',
+            title: 'Create Folders',
+            task: () => createFolder(targetDir),
+        },
+        {
+            title: 'Copy Files',
             task: () => copyTemplateFiles(templateDir, targetDir),
         },
         {
-            title: 'Building package',
-            task: () => {
+            title: '',
+            task: async () => {
                 shell.cd(targetDir)
-                fs.writeFile(
-                    'package.json',
-                    JSON.stringify(Package, null, 4),
-                    function(err) {
-                        if (err) throw err
-                    }
+
+                await spawn('npm', ['init', '--yes'])
+
+                await setTimeoutPromise(1000)
+
+                const createTargetDirFolder = path.resolve(
+                    targetDir,
+                    'package.json'
                 )
+
+                try {
+                    const existingPackageJson = fs.readFileSync(
+                        createTargetDirFolder,
+                        'utf-8'
+                    )
+
+                    const packageJson = JSON.parse(existingPackageJson)
+
+                    packageJson.name = process.argv[2]
+                    packageJson.scripts = {
+                        start: 'parcel ./public/index.html --open',
+                        build:
+                            'parcel build ./public/index.html --public-url ./',
+                        test: 'jest --watchAll',
+                        prettier:
+                            'prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js',
+                    }
+                    packageJson.jest = {
+                        setupFilesAfterEnv: ['./src/setupTest.js'],
+                        snapshotSerializers: ['enzyme-to-json/serializer'],
+                    }
+                    packageJson.main = 'index.js'
+
+                    const updatedPackageJson = JSON.stringify(
+                        packageJson,
+                        null,
+                        2
+                    )
+
+                    fs.writeFileSync(
+                        createTargetDirFolder,
+                        updatedPackageJson,
+                        'utf-8'
+                    )
+
+                    console.log('package.json updated successfully!')
+                } catch (error) {
+                    console.error('Error updating package.json:', error)
+                }
             },
         },
         {
@@ -99,9 +160,19 @@ const taskList = async (templateDir, targetDir) => {
                 return new Observable(observer => {
                     new Promise(resolve => {
                         observer.next(`@Babel dependencies`)
+
+                        const packagesToInstall = [
+                            '@babel/core',
+                            '@babel/preset-env',
+                            '@babel/preset-react',
+                        ]
+
                         const babelDevs = spawn(
-                            'npm i --save-dev @babel/core @babel/preset-env @babel/preset-react',
-                            { shell: true }
+                            'npm',
+                            ['i', ...packagesToInstall],
+                            {
+                                shell: true,
+                            }
                         )
                         return babelDevs.on('exit', () => {
                             observer.next('@Testing dependencies')

@@ -3,9 +3,7 @@
   "version": "1.0.5",
   "description": "parcel-app allows you to create a parcel application without code something about it.",
   "main": "src/index.js",
-  "bin": {
-    "parcel-app": "bin/parcel-app"
-  },
+  "bin": "bin/quick-parcel-app",
   "publishConfig": {
     "access": "public"
   },
@@ -39,5 +37,8 @@
     "templates/"
   ],
   "author": "Jhornan Colina (karttofel)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
 }

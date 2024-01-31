@@ -2,9 +2,10 @@ import path from 'path'
 import { welcomeMessage, finalMessage, taskList } from './methods.js'
 
 const actualPath = import.meta.url
-const templatesDir = path
-    .resolve(new URL(actualPath).pathname, '../../templates/default')
-    .slice(3)
+const templatesDir = path.resolve(
+    new URL(actualPath).pathname,
+    '../../templates/default'
+)
 
 export async function cli(args) {
     welcomeMessage(args, `${process.cwd()}/${args}`)

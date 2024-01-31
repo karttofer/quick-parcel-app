@@ -1,6 +1,11 @@
+// Components
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+
+// Style
 import './style.css'
+
+// Dependencies
+import App from './App'
 
 ReactDOM.render(<App />, document.getElementById('root'))
